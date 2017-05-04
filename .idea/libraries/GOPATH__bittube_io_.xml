@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;bittube.io&gt;">
+    <CLASSES>
+      <root url="file://$USER_HOME$/golang/src/src" />
+      <root url="file://$USER_HOME$/golang/src/gopkg.in" />
+      <root url="file://$USER_HOME$/golang/src/bin" />
+      <root url="file://$USER_HOME$/golang/src/github.com" />
+      <root url="file://$USER_HOME$/golang/src/golang.org" />
+      <root url="file://$USER_HOME$/golang/src/cloud.google.com" />
+      <root url="file://$USER_HOME$/golang/src/google.golang.org" />
+      <root url="file://$USER_HOME$/golang/src/pkg" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$USER_HOME$/golang/src/src" />
+      <root url="file://$USER_HOME$/golang/src/gopkg.in" />
+      <root url="file://$USER_HOME$/golang/src/bin" />
+      <root url="file://$USER_HOME$/golang/src/github.com" />
+      <root url="file://$USER_HOME$/golang/src/golang.org" />
+      <root url="file://$USER_HOME$/golang/src/cloud.google.com" />
+      <root url="file://$USER_HOME$/golang/src/google.golang.org" />
+      <root url="file://$USER_HOME$/golang/src/pkg" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

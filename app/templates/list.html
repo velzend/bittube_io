@@ -1,0 +1,16 @@
+<h3>Videos</h3>
+<a href="/videos/add" class="btn btn-success btn-sm">
+  <i class="glyphicon glyphicon-plus"></i>
+  <span>Add video</span>
+</a>
+
+{{range .}}
+<div class="media">
+  <div class="media-body">
+    <h4><a href="/videos/{{.ID}}">{{if .Title}}<a href="{{.VideoURL}}">{{.Title}}</a>{{else}}No name{{end}}</a></h4>
+    <p>{{.Author}}</p>
+  </div>
+</div>
+{{else}}
+<p>No videos found.</p>
+{{end}}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bittube.io</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <div class="navbar-brand">Videoshelf</div>
+    </div>
+
+    <ul class="nav navbar-nav">
+      <li><a href="/videos">Videos</a></li>
+      {{if .AuthEnabled}}
+        <li><a href="/videos/mine">My Videos</a></li>
+      {{end}}
+    </ul>
+
+    <!-- [START auth] -->
+    {{if .AuthEnabled}}
+      {{if .Profile}}
+      <form method="post" action="{{.LogoutURL}}" class="navbar-form navbar-right">
+        <button class="btn btn-default">Log out</button>
+      </form>
+      <div class="navbar-text navbar-right">
+        {{if .Profile.ImageURL}}
+          <img class="img-circle" width="24" src="{{.Profile.ImageURL}}">
+        {{end}}
+        <span>{{.Profile.DisplayName}}</span>
+      </div>
+      {{else}}
+      <div class="navbar-text navbar-right">
+        <a href="{{.LoginURL}}">Log in</a>
+      </div>
+      {{end}}
+    {{end}}
+    <!-- [END auth] -->
+  </div>
+</div>
+<div class="container">
+  {{template "body" .Data}}
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

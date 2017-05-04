@@ -1,0 +1,6 @@
+api_version: go1
+env: flex
+runtime: go
+
+env_variables:
+  OAUTH2_CALLBACK: https://bittube.io/oauth2callback

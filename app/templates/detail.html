@@ -1,0 +1,20 @@
+<h3>Video</h3>
+<div class="media">
+  <div class="media-left">
+    <main id="sitemain">
+      <div id="player__holder">
+        <video id="player" controls>
+          {{if .VideoURL}}<source src="{{.VideoURL}}">{{else}}<p><strong>Video not found!</strong></p>{{end}}
+          <p>Your browser does not support playing video. Update your browser to watch this video.</p>
+        </video>
+      </div>
+    </main>
+    <script src="/js/cash.min.js"></script>
+  </div>
+  <div class="media-body">
+    <h4>{{.Title}} <small>{{.PublishedDate}}</small></h4>
+    <h5>By {{if .Author}}{{.Author}}{{else}}unknown{{end}}</h5>
+    <p>{{.Description}}</p>
+    <small>Added by {{.CreatedByDisplayName}}</small>
+  </div>
+</div>
